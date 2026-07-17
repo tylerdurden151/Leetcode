@@ -15,9 +15,10 @@ Output: [4,9,9,49,121]
  */
 
 Solution s = new Solution();    
-s.SortedSquares(new int[] { -4, -1, 0, 3, 10 });
-s.SortedSquares(new int[] { -7, -3, 2, 3, 11 });
-
+int[] result1 = s.SortedSquares(new int[] { -4, -1, 0, 3, 10 });
+int[] result2 = s.SortedSquares(new int[] { -7, -3, 2, 3, 11 });
+Console.WriteLine(string.Join(",", result1));
+Console.WriteLine(string.Join(",", result2));
 
 public class Solution
 {
@@ -39,14 +40,14 @@ public class Solution
             if (leftSq > rightSq)
             {
                 //Store the higher Square into the results array
-                result[left] = leftSq;
+                result[pos] = leftSq;
                 //increment up 
                 left++;
             }
             else
             {
                 //Store the higher Square into the results array
-                result[right] = rightSq;
+                result[pos] = rightSq;
                 //increment up 
                 right--;
             }
