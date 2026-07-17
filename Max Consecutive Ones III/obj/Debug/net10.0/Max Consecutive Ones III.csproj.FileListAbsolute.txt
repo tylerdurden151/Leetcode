@@ -1,0 +1,15 @@
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\bin\Debug\net10.0\Max Consecutive Ones III.exe
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\bin\Debug\net10.0\Max Consecutive Ones III.deps.json
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\bin\Debug\net10.0\Max Consecutive Ones III.runtimeconfig.json
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\bin\Debug\net10.0\Max Consecutive Ones III.dll
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\bin\Debug\net10.0\Max Consecutive Ones III.pdb
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\Max Consecutive Ones III.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\Max Consecutive Ones III.AssemblyInfoInputs.cache
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\Max Consecutive Ones III.AssemblyInfo.cs
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\Max Consecutive Ones III.csproj.CoreCompileInputs.cache
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\Max Consecutive Ones III.sourcelink.json
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\Max Consecutive Ones III.dll
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\refint\Max Consecutive Ones III.dll
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\Max Consecutive Ones III.pdb
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\Max Consecutive Ones III.genruntimeconfig.cache
+C:\Users\tyler\source\repos\Leetcode\Max Consecutive Ones III\obj\Debug\net10.0\ref\Max Consecutive Ones III.dll
