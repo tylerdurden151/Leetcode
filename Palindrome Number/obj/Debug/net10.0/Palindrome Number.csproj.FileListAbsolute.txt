@@ -1,0 +1,15 @@
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\Palindrome Number.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\Palindrome Number.AssemblyInfoInputs.cache
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\Palindrome Number.AssemblyInfo.cs
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\Palindrome Number.csproj.CoreCompileInputs.cache
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\Palindrome Number.sourcelink.json
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\bin\Debug\net10.0\Palindrome Number.exe
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\bin\Debug\net10.0\Palindrome Number.deps.json
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\bin\Debug\net10.0\Palindrome Number.runtimeconfig.json
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\bin\Debug\net10.0\Palindrome Number.dll
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\bin\Debug\net10.0\Palindrome Number.pdb
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\Palindrome Number.dll
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\refint\Palindrome Number.dll
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\Palindrome Number.pdb
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\Palindrome Number.genruntimeconfig.cache
+C:\Users\tyler\source\repos\Leetcode\Palindrome Number\obj\Debug\net10.0\ref\Palindrome Number.dll

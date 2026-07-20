@@ -25,3 +25,32 @@ Constraints:
 
 -231 <= x <= 231 - 1
  */
+
+
+Solution s = new Solution();
+bool result = s.IsPalindrome(121);
+Console.WriteLine($"{result}");
+
+public class Solution
+{
+    public bool IsPalindrome(int x)
+    {
+        if (x < 0)
+        {
+            return false;
+        }
+
+        int original = x;
+        long reversed = 0;
+
+        while (x > 0)
+        {
+            int digit = x % 10;
+            reversed = reversed * 10 + digit;
+            x /= 10;
+        }
+
+        return reversed == original;
+
+    }
+}
