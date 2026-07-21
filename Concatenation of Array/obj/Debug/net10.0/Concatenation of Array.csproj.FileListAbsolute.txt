@@ -1,0 +1,15 @@
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\bin\Debug\net10.0\Concatenation of Array.exe
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\bin\Debug\net10.0\Concatenation of Array.deps.json
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\bin\Debug\net10.0\Concatenation of Array.runtimeconfig.json
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\bin\Debug\net10.0\Concatenation of Array.dll
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\bin\Debug\net10.0\Concatenation of Array.pdb
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\Concatenation of Array.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\Concatenation of Array.AssemblyInfoInputs.cache
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\Concatenation of Array.AssemblyInfo.cs
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\Concatenation of Array.csproj.CoreCompileInputs.cache
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\Concatenation of Array.sourcelink.json
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\Concatenation of Array.dll
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\refint\Concatenation of Array.dll
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\Concatenation of Array.pdb
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\Concatenation of Array.genruntimeconfig.cache
+C:\Users\tyler\source\repos\Leetcode\Concatenation of Array\obj\Debug\net10.0\ref\Concatenation of Array.dll
