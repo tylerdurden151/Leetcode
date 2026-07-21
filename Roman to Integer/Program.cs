@@ -50,8 +50,10 @@ public class Solution
         {
             int current = romanValues[s[i]];
 
+            // Check if the current value is less than the next value
             if (i + 1 < s.Length && current < romanValues[s[i + 1]])
             {
+                //Remove the current value from the result if it is less than the next value
                 result -= current;   // subtractive pair — this symbol counts negative
             }
             else
