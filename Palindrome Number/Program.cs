@@ -45,11 +45,14 @@ public class Solution
 
         while (x > 0)
         {
+            // Get the last digit of x "right pointer"
             int digit = x % 10;
+            // Append the digit to the reversed number "left pointer"
             reversed = reversed * 10 + digit;
+            // Remove the last digit from x
             x /= 10;
         }
-
+        //Compare the reversed number with the original number
         return reversed == original;
 
     }
