@@ -26,6 +26,11 @@ Console.WriteLine(s.Fib(3));
 Console.WriteLine(s.Fib(4));
 Console.WriteLine(s.Fib(5));
 
+Solution2 s2 = new Solution2();
+Console.WriteLine(s2.FibI(2));
+Console.WriteLine(s2.FibI(3));
+Console.WriteLine(s2.FibI(4));
+
 public class Solution
 {
     public int Fib(int n)
@@ -35,5 +40,22 @@ public class Solution
             return n;
         }
         return Fib(n - 1) + Fib(n - 2);
+    }
+}
+
+public class Solution2
+{
+    public int FibI(int n)
+    {
+        if (n <= 1) return n;
+        var fib1 = 0; var fib2 = 1;
+        for (var i = 2; i <= n; i++)
+        {
+            var temp = fib1 + fib2;
+            fib1 = fib2;
+            fib2 = temp;
+        }
+
+        return fib2;
     }
 }
