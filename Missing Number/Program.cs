@@ -39,6 +39,7 @@ class Solution
     public int MissingNumber(int[] nums)
     {
         int n = nums.Length;
+        //Gauss's summation formula
         int expectedSum = n * (n + 1) / 2;
         int actualSum = 0;
         foreach (int num in nums)
