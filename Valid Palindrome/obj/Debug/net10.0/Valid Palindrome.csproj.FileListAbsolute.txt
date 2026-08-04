@@ -1,0 +1,15 @@
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\bin\Debug\net10.0\Valid Palindrome.exe
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\bin\Debug\net10.0\Valid Palindrome.deps.json
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\bin\Debug\net10.0\Valid Palindrome.runtimeconfig.json
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\bin\Debug\net10.0\Valid Palindrome.dll
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\bin\Debug\net10.0\Valid Palindrome.pdb
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\Valid Palindrome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\Valid Palindrome.AssemblyInfoInputs.cache
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\Valid Palindrome.AssemblyInfo.cs
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\Valid Palindrome.csproj.CoreCompileInputs.cache
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\Valid Palindrome.sourcelink.json
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\Valid Palindrome.dll
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\refint\Valid Palindrome.dll
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\Valid Palindrome.pdb
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\Valid Palindrome.genruntimeconfig.cache
+C:\Users\tyler\source\repos\Leetcode\Valid Palindrome\obj\Debug\net10.0\ref\Valid Palindrome.dll
