@@ -35,7 +35,9 @@ public class Solution
 {
     public int RomanToInt(string s)
     {
+     //declare return value
         int result = 0;
+     //create a Dictionary
         Dictionary<char, int> romanValues = new Dictionary<char, int>()
         {
             { 'I', 1 },
@@ -48,16 +50,20 @@ public class Solution
         };
         for (int i = 0; i < s.Length; i++)
         {
+         //pull the index value and match to the dictionary key value I = 1
+         //then the value will be stored in current 
             int current = romanValues[s[i]];
 
-            // Check if the current value is less than the next value
+             //Check if the next there are more values left in s
+            //Also check if the next value is bigger
             if (i + 1 < s.Length && current < romanValues[s[i + 1]])
             {
-                //Remove the current value from the result if it is less than the next value
+               //Remove the current value from the result if it is less than the next value
                 result -= current;   // subtractive pair — this symbol counts negative
             }
             else
             {
+             //if current is bigger than the next, store in result
                 result += current;   // normal case — add as before
             }
         }
