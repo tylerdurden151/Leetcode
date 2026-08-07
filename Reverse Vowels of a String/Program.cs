@@ -23,6 +23,9 @@ Output: "leotcede"
  
  */
 
+Solution s = new Solution();
+Console.WriteLine(s.ReverseVowels("IceCreAm")); // Output: "AceCreIm"
+Console.WriteLine(s.ReverseVowels("leetcode")); // Output: "leotcede"
 
 public class Solution
 {
