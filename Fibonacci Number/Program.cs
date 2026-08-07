@@ -48,7 +48,8 @@ public class Solution2
     public int FibI(int n)
     {
         if (n <= 1) return n;
-        var fib1 = 0; var fib2 = 1;
+        var fib1 = 0; 
+        var fib2 = 1;
         for (var i = 2; i <= n; i++)
         {
             var temp = fib1 + fib2;
