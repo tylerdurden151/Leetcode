@@ -69,3 +69,45 @@ public class Solution
         return new string(reversed);
     }
 }
+
+// Faster solution using two pointers and
+// a helper function to check for vowels
+public class Solution2
+{
+    public string ReverseVowels(string s)
+    {
+        var chars = s.ToCharArray();
+        var len = chars.Length;
+
+        int l = 0;
+        int r = len - 1;
+        while (l < r)
+        {
+            if (!IsVowel(chars[l]))
+            {
+                l++;
+            }
+            else if (!IsVowel(chars[r]))
+            {
+                r--;
+            }
+            else
+            {
+                (chars[l], chars[r]) = (chars[r], chars[l]);
+                l++; r--;
+            }
+        }
+
+        return new string(chars);
+    }
+
+    private bool IsVowel(char c)
+    {
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
+         || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+        {
+            return true;
+        }
+        return false;
+    }
+}
