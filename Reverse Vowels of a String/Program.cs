@@ -118,32 +118,40 @@ public class Solution3
 {
     public string ReverseVowels(string s)
     {
+        //declare char array since string is immutable
+        char[] sChar = s.ToCharArray();
+        // declare pointers & string vowels
         int left = 0;
         int right = s.Length - 1;
         string vowels = "aeiouAEIOU";
-        char[] sChar = s.ToCharArray();
-        char temp;
+
+        //compare left and right pointers
         while (left < right)
         {
-
+            //loop thru the left pointer until vowel is found
+            //skipped it found
             while (left < right && !vowels.Contains(sChar[left]))
             {
+                //if not found increment up
                 left++;
             }
-
             while (left < right && !vowels.Contains(sChar[right]))
             {
+                //if not found increment down
                 right--;
             }
+            //with the vowels found swap them
             if (left < right)
             {
-                temp = sChar[left];
+                char temp = sChar[left];
                 sChar[left] = sChar[right];
                 sChar[right] = temp;
+                //increment up and down
                 left++;
                 right--;
             }
         }
+        //return new string with the chararray
         return new string(sChar);
     }
 }
