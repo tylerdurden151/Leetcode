@@ -78,19 +78,27 @@ public class Solution3
 {
     public bool CanPlaceFlowers(int[] flowerbed, int n)
     {
+        //loop thru array
         for (int i = 0; i < flowerbed.Length; i++)
         {
+            //store empty, left, and right values as bools
+            //check if current index value is 0
             bool isEmpty = flowerbed[i] == 0;
+            //check if its the first index or check the value of left is 0
             bool leftOk = (i == 0) || (flowerbed[i - 1] == 0);
+            //check if its the last index or check the value of the right is 0
             bool rightOk = (i == flowerbed.Length - 1) || (flowerbed[i + 1] == 0);
 
+            //check all three
             if (isEmpty && leftOk && rightOk)
             {
+                //plot a 1 in the index
                 flowerbed[i] = 1;
+                //increment target down
                 n--;
             }
         }
-
+        //return bool if all the n values have been used or not
         return n <= 0;
     }
 }
