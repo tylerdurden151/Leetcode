@@ -72,3 +72,25 @@ public class Solution2
         return (n <= 0);
     }
 }
+
+//even cleaner solution with better readability
+public class Solution3
+{
+    public bool CanPlaceFlowers(int[] flowerbed, int n)
+    {
+        for (int i = 0; i < flowerbed.Length; i++)
+        {
+            bool isEmpty = flowerbed[i] == 0;
+            bool leftOk = (i == 0) || (flowerbed[i - 1] == 0);
+            bool rightOk = (i == flowerbed.Length - 1) || (flowerbed[i + 1] == 0);
+
+            if (isEmpty && leftOk && rightOk)
+            {
+                flowerbed[i] = 1;
+                n--;
+            }
+        }
+
+        return n <= 0;
+    }
+}
