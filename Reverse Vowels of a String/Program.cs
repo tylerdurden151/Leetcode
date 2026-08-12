@@ -70,7 +70,7 @@ public class Solution
     }
 }
 
-// Faster solution using two pointers and
+// Fastest solution using two pointers and
 // a helper function to check for vowels
 public class Solution2
 {
@@ -109,5 +109,41 @@ public class Solution2
             return true;
         }
         return false;
+    }
+}
+
+// Another solution using two pointers and string.Contains() to check for vowels
+//Easier to read but slower than the previous solution
+public class Solution3
+{
+    public string ReverseVowels(string s)
+    {
+        int left = 0;
+        int right = s.Length - 1;
+        string vowels = "aeiouAEIOU";
+        char[] sChar = s.ToCharArray();
+        char temp;
+        while (left < right)
+        {
+
+            while (left < right && !vowels.Contains(sChar[left]))
+            {
+                left++;
+            }
+
+            while (left < right && !vowels.Contains(sChar[right]))
+            {
+                right--;
+            }
+            if (left < right)
+            {
+                temp = sChar[left];
+                sChar[left] = sChar[right];
+                sChar[right] = temp;
+                left++;
+                right--;
+            }
+        }
+        return new string(sChar);
     }
 }
