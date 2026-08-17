@@ -44,22 +44,22 @@ public class Solution
     //Faster Solution O(1) space complexity
     public class Solution2
     {
-        public int RemoveDuplicates(int[] nums)
+    public int RemoveDuplicates(int[] nums)
+    {
+        int read = 1;
+        int write = 0;
+
+        while (read < nums.Length)
         {
-            int current = 1;
-            int uniqueIndex = 0;
-
-            while (current < nums.Length)
+            if (nums[read] != nums[write])
             {
-                if (nums[current] != nums[uniqueIndex])
-                {
-                    uniqueIndex++;
-                    nums[uniqueIndex] = nums[current];
-                }
-
-                current++;
+                write++;
+                nums[write] = nums[read];
             }
 
-            return uniqueIndex + 1;
+            read++;
         }
+
+        return write + 1;
     }
+}
