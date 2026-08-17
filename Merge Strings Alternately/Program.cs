@@ -18,6 +18,9 @@ word1: a b
 word2: p q r s
 merged: a p b q r s
 */
+
+using System.Text;
+
 Solution s = new Solution();
 string word1 = "abc";
 string word2 = "pqr";
@@ -26,7 +29,24 @@ Console.WriteLine(s.MergeAlternately(word1, word2));
 
 public class Solution
 {
+    //Simple and cleaner solution using StringBuilder
     public string MergeAlternately(string word1, string word2)
+    {
+        StringBuilder result = new StringBuilder();
+        int i = 0;
+
+        while (i < word1.Length || i < word2.Length)
+        {
+            if (i < word1.Length) result.Append(word1[i]);
+            if (i < word2.Length) result.Append(word2[i]);
+            i++;
+        }
+
+        return result.ToString();
+
+    }
+
+    public string MergeAlternately2(string word1, string word2)
     {
         //strings are immutable
         char[] result = new char[word1.Length + word2.Length];
