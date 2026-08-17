@@ -46,6 +46,7 @@ public class Solution
     {
     public int RemoveDuplicates(int[] nums)
     {
+        //Read & Write two pointer Techinque
         int read = 1;
         int write = 0;
 
