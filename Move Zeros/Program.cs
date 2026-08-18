@@ -30,9 +30,11 @@ public class Solution2
         for (int i = 0; i < nums.Length; i++)
         {
             if (nums[i] != 0)
-            {
+            {   //This store the zero in a temp variable so we can move it to the back of the array
                 int temp = nums[pos];
+                //This moves the non-zero number to the front of the array
                 nums[pos] = nums[i];
+                //This moves the zero to the back of the array
                 nums[i] = temp;
                 pos++;
             }
