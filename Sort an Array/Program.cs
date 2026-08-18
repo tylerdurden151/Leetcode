@@ -129,6 +129,11 @@ public class Solution
         }
     }
 
+    //Cleaner and Shorter version of Mergesort
+
+    //Faster
+    //Note problem asked for O(n log(n)) time complexity and with the smallest space complexity possible. 
+
     public int[] SortArray4(int[] nums)
     {
         if (nums.Length < 2)
