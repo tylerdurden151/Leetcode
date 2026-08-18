@@ -32,7 +32,7 @@ public class Solution
         {
             if (left >= right) return;
 
-            int mid = (right - left) / 2 + left;
+            int mid = (left + right) / 2;
             MergeSort(left, mid);
             MergeSort(mid + 1, right);
             Merge(left, mid, right);
@@ -126,6 +126,45 @@ public class Solution
             }
             return nums;
 
+        }
+    }
+
+    public int[] SortArray4(int[] nums)
+    {
+        if (nums.Length < 2)
+        {
+            return nums;
+        }
+
+        int[] buf = (int[])nums.Clone();
+        MergeSort(buf, nums, 0, nums.Length - 1);
+        return nums;
+    }
+
+    private void MergeSort(int[] src, int[] dst, int left, int right)
+    {
+        if (left >= right)
+        {
+            return;
+        }
+
+        int mid = left + (right - left) / 2;
+
+        // note the swap: children write into src
+        MergeSort(dst, src, left, mid);
+        MergeSort(dst, src, mid + 1, right);
+
+        int i = left, j = mid + 1;
+        for (int k = left; k <= right; k++)
+        {
+            if (j > right || (i <= mid && src[i] <= src[j]))
+            {
+                dst[k] = src[i++];
+            }
+            else
+            {
+                dst[k] = src[j++];
+            }
         }
     }
 
