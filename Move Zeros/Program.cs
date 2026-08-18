@@ -23,7 +23,7 @@ Console.WriteLine(string.Join(",", result2));
 
 public class Solution2
 {
-    public int[] MoveZeroes(int[] nums)
+    public int[] MoveZeroes1(int[] nums)
     {
         int pos = 0;
 
@@ -40,6 +40,25 @@ public class Solution2
             }
         }
         return nums;
+    }
+
+
+    //Correct Leetcode solution
+    public void MoveZeroes(int[] nums)
+    {
+        int pos = 0;
+        for (int i = 0; i < nums.Length; i++)
+        {
+
+            if (nums[i] != 0)
+            {
+                int temp = nums[pos];
+                nums[pos] = nums[i];
+                nums[i] = temp;
+                pos++;
+            }
+
+        }
     }
 
 }
