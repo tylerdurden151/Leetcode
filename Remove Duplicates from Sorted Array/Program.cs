@@ -52,14 +52,20 @@ public class Solution
 
         while (read < nums.Length)
         {
+
+            //Skip if the current number is the same as the previous number
             if (nums[read] != nums[write])
             {
+                //If the current number is different from the previous number,
+                //move the write pointer forward
+                //update the value at the write pointer to the current number
                 write++;
                 nums[write] = nums[read];
             }
 
             read++;
         }
+        //Return the length of the array without duplicates
 
         return write + 1;
     }
