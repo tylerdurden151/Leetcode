@@ -175,3 +175,50 @@ public class Solution
 
 
 }
+
+public class Solution2
+{
+    public int[] SortArray(int[] nums)
+    {
+        int n = nums.Length;
+        int[] buf = new int[n];
+        int[] src = nums;
+        int[] dst = buf;
+
+        for (int width = 1; width < n; width *= 2)
+        {
+            for (int left = 0; left < n; left += 2 * width)
+            {
+                int mid = Math.Min(left + width, n) - 1;
+                int right = Math.Min(left + 2 * width, n) - 1;
+                Merge(src, dst, left, mid, right);
+            }
+
+            (src, dst) = (dst, src);
+        }
+
+        if (src != nums)
+        {
+            Array.Copy(src, nums, n);
+        }
+
+        return nums;
+    }
+
+    private void Merge(int[] src, int[] dst, int left, int mid, int right)
+    {
+        int i = left, j = mid + 1;
+
+        for (int k = left; k <= right; k++)
+        {
+            if (j > right || (i <= mid && src[i] <= src[j]))
+            {
+                dst[k] = src[i++];
+            }
+            else
+            {
+                dst[k] = src[j++];
+            }
+        }
+    }
+}
