@@ -24,6 +24,7 @@ public class Solution
 {
     //Big O(n log(n))
     //Mergesort (fastest for this problem)
+    //HARD TO READ THOUGH
     public int[] SortArray(int[] nums)
     {
         int[] temp = new int[nums.Length];
@@ -129,7 +130,6 @@ public class Solution
         }
     }
 
-    //Cleaner and Shorter version of Mergesort
 
     //Faster
     //Note problem asked for O(n log(n)) time complexity and with the smallest space complexity possible. 
@@ -175,15 +175,15 @@ public class Solution
 
 
 }
-
+// Cleaner and Shorter version of Mergesort
+//BEST VERSION!!!
 public class Solution2
 {
     public int[] SortArray(int[] nums)
     {
         int n = nums.Length;
-        int[] buf = new int[n];
         int[] src = nums;
-        int[] dst = buf;
+        int[] dst = new int[n];
 
         for (int width = 1; width < n; width *= 2)
         {
@@ -191,34 +191,27 @@ public class Solution2
             {
                 int mid = Math.Min(left + width, n) - 1;
                 int right = Math.Min(left + 2 * width, n) - 1;
+
                 Merge(src, dst, left, mid, right);
             }
 
             (src, dst) = (dst, src);
         }
 
-        if (src != nums)
-        {
-            Array.Copy(src, nums, n);
-        }
-
-        return nums;
+        return src;
     }
 
     private void Merge(int[] src, int[] dst, int left, int mid, int right)
     {
-        int i = left, j = mid + 1;
+        int i = left;
+        int j = mid + 1;
 
         for (int k = left; k <= right; k++)
         {
             if (j > right || (i <= mid && src[i] <= src[j]))
-            {
                 dst[k] = src[i++];
-            }
             else
-            {
                 dst[k] = src[j++];
-            }
         }
     }
 }
