@@ -182,8 +182,7 @@ public class Solution2
     public int[] SortArray(int[] nums)
     {
         int n = nums.Length;
-        int[] src = nums;
-        int[] dst = new int[n];
+        int[] temp = new int[n];
 
         for (int width = 1; width < n; width *= 2)
         {
@@ -192,26 +191,28 @@ public class Solution2
                 int mid = Math.Min(left + width, n) - 1;
                 int right = Math.Min(left + 2 * width, n) - 1;
 
-                Merge(src, dst, left, mid, right);
+                Merge(nums, temp, left, mid, right);
             }
 
-            (src, dst) = (dst, src);
+            // Copy everything back into nums
+            for (int i = 0; i < n; i++)
+                nums[i] = temp[i];
         }
 
-        return src;
+        return nums;
     }
 
-    private void Merge(int[] src, int[] dst, int left, int mid, int right)
+    private void Merge(int[] nums, int[] temp, int left, int mid, int right)
     {
         int i = left;
         int j = mid + 1;
 
         for (int k = left; k <= right; k++)
         {
-            if (j > right || (i <= mid && src[i] <= src[j]))
-                dst[k] = src[i++];
+            if (j > right || (i <= mid && nums[i] <= nums[j]))
+                temp[k] = nums[i++];
             else
-                dst[k] = src[j++];
+                temp[k] = nums[j++];
         }
     }
 }
