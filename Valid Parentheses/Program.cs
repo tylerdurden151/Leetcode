@@ -46,37 +46,28 @@ public class Solution
 {
     public bool IsValid(string s)
     {
-        Stack<char> stack = new Stack<char>();
+        Stack<char> stack = new();
 
         foreach (char c in s)
         {
-            if (c == '(' || c == '[' || c == '{')
+            switch (c)
             {
-                stack.Push(c);
-            }
-            else
-            {
-                if (stack.Count == 0)
-                {
-                    return false;
-                }
+                case '(':
+                    stack.Push(')');
+                    break;
 
-                char top = stack.Pop();
+                case '[':
+                    stack.Push(']');
+                    break;
 
-                if (c == ')' && top != '(')
-                {
-                    return false;
-                }
+                case '{':
+                    stack.Push('}');
+                    break;
 
-                if (c == ']' && top != '[')
-                {
-                    return false;
-                }
-
-                if (c == '}' && top != '{')
-                {
-                    return false;
-                }
+                default:
+                    if (stack.Count == 0 || stack.Pop() != c)
+                        return false;
+                    break;
             }
         }
 
