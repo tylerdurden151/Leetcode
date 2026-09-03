@@ -216,3 +216,61 @@ public class Solution2
         }
     }
 }
+
+//With comments
+public class Solution
+{
+    public int[] SortArray(int[] nums)
+    {
+        int n = nums.Length;
+        int[] temp = new int[n];
+        //set a loop to double the size for nums chunks
+        for (int width = 1; width < n; width *= 2)
+        {
+            for (int left = 0; left < n; left += 2 * width)
+            {
+                //find the mid
+                int mid = Math.Min(left + width, n) - 1;
+                //find the right
+                int right = Math.Min(left + 2 * width, n) - 1;
+                //send to helper method to merge
+                //nums, temp, 0, 1, 3
+                Merge(nums, temp, left, mid, right);
+            }
+            //copy everything into nums
+            for (int i = 0; i < n; i++)
+            {
+                nums[i] = temp[i];
+            }
+        }
+        return nums;
+    }
+
+    //helper function
+    private void Merge(int[] nums, int[] temp, int left, int mid, int right)
+    {
+        int i = left; //start on the left chunk
+        int j = mid + 1; //start on the right chunk
+        //fill everything left to right in the temp array
+        for (int k = left; k <= right; k++)
+        {
+            //check if the right chunk is empty
+            //OR
+            //check if there are numbers in the left chunk
+            //&&
+            //is the left number lower or equal to current right number
+            if (j > right || (i <= mid && nums[i] <= nums[j]))
+            {
+                //if true take the left number
+                temp[k] = nums[i++];
+            }
+            else
+            {
+                //if false take the right number 
+                temp[k] = nums[j++];
+            }
+
+        }
+
+    }
+}
