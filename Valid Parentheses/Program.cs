@@ -42,42 +42,44 @@ Output: false
  */
 
 
-public bool IsValid(string s)
+public class Solution
 {
-    Stack<char> stack = new Stack<char>();
-
-    foreach (char c in s)
+    public bool IsValid(string s)
     {
-        if (c == '(' || c == '[' || c == '{')
+        Stack<char> stack = new Stack<char>();
+
+        foreach (char c in s)
         {
-            stack.Push(c);
+            if (c == '(' || c == '[' || c == '{')
+            {
+                stack.Push(c);
+            }
+            else
+            {
+                if (stack.Count == 0)
+                {
+                    return false;
+                }
+
+                char top = stack.Pop();
+
+                if (c == ')' && top != '(')
+                {
+                    return false;
+                }
+
+                if (c == ']' && top != '[')
+                {
+                    return false;
+                }
+
+                if (c == '}' && top != '{')
+                {
+                    return false;
+                }
+            }
         }
-        else
-        {
-            if (stack.Count == 0)
-            {
-                return false;
-            }
 
-            char top = stack.Pop();
-
-            if (c == ')' && top != '(')
-            {
-                return false;
-            }
-
-            if (c == ']' && top != '[')
-            {
-                return false;
-            }
-
-            if (c == '}' && top != '{')
-            {
-                return false;
-            }
-        }
+        return stack.Count == 0;
     }
-
-    return stack.Count == 0;
-}
 }
