@@ -57,29 +57,31 @@ public class Solution
 {
     public IList<IList<int>> Generate(int numRows)
     {
+        //Create a 2D list
         List<IList<int>> result = new List<IList<int>>();
-
+        //loop for rows
         for (int i = 0; i < numRows; i++)
         {
+            //inner 
             List<int> row = new List<int>();
-
             for (int j = 0; j <= i; j++)
             {
-                // First or last number is always 1
+                //First or last digit is always 1
                 if (j == 0 || j == i)
                 {
                     row.Add(1);
                 }
                 else
                 {
-                    // Add the two numbers above
+                    //if the middle
+                    //row.Add(result[2][0] + result[2][1]);
+                    //result[row][column]
                     row.Add(result[i - 1][j - 1] + result[i - 1][j]);
                 }
             }
-
+            //add row to result list
             result.Add(row);
         }
-
         return result;
     }
 }
