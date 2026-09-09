@@ -33,11 +33,11 @@ public class Solution
     {
         int read1 = m - 1;
         int read2 = n - 1;
-        int write = nums1.Length - 1;
+        int write = m + n - 1;
 
-        while (read1 >= 0 && read2 >= 0)
+        while (read2 >= 0)
         {
-            if (nums1[read1] > nums2[read2])
+            if (read1 >= 0 &&  nums1[read1] > nums2[read2])
             {
                 nums1[write] = nums1[read1];
                 read1--;
@@ -50,13 +50,5 @@ public class Solution
 
             write--;
         }
-
-        while (read2 >= 0)
-        {
-            nums1[write] = nums2[read2];
-
-            read2--;
-            write--;
         }
-    }
 }
