@@ -37,11 +37,13 @@ public class Solution
             if (l1 != null)
             {
                 value1 = l1.val;
+                l1 = l1.next;
             }
 
             if (l2 != null)
             {
                 value2 = l2.val;
+                l2 = l2.next;
             }
 
             int sum = value1 + value2 + carry;
@@ -51,16 +53,6 @@ public class Solution
 
             currentNode.next = new ListNode(digit);
             currentNode = currentNode.next;
-
-            if (l1 != null)
-            {
-                l1 = l1.next;
-            }
-
-            if (l2 != null)
-            {
-                l2 = l2.next;
-            }
         }
 
         return head.next;
