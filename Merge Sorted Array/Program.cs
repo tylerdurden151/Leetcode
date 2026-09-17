@@ -31,12 +31,16 @@ public class Solution
 {
     public void Merge(int[] nums1, int m, int[] nums2, int n)
     {
+        //2 reads and a write
+        // We're starting at the end then move from right to left
         int read1 = m - 1;
         int read2 = n - 1;
+        //The write pointer starts at the end of the merged array
         int write = m + n - 1;
 
         while (read2 >= 0)
         {
+            //We're looking for the largest value between the two arrays and writing it to the end of nums1
             if (read1 >= 0 &&  nums1[read1] > nums2[read2])
             {
                 nums1[write] = nums1[read1];
