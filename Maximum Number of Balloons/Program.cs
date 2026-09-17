@@ -44,9 +44,27 @@ public class Solution
         int o = freq['o' - 'a'] / 2;
         int n = freq['n' - 'a'];
 
-        return Math.Min(
-            Math.Min(b, a),
-            Math.Min(Math.Min(l, o), n)
-        );
+        int b = freq['b' - 'a'];
+        int a = freq['a' - 'a'];
+        int l = freq['l' - 'a'] / 2;
+        int o = freq['o' - 'a'] / 2;
+        int n = freq['n' - 'a'];
+
+
+        //We only care about the minimum number of letters needed to form the word "balloon"
+        //Waterfalling down the mountain, we find the minimum number of letters needed to form the word "balloon"
+        //if a letter is missing, we can't form the word "balloon"
+        //therefore, we take the minimum of the number of letters needed to form the word "balloon"
+
+        int min = b;
+        
+
+        //Bottleneck/minimum count
+        min = Math.Min(min, a);
+        min = Math.Min(min, l);
+        min = Math.Min(min, o);
+        min = Math.Min(min, n);
+
+        return min;
     }
 }
