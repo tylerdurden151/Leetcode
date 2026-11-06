@@ -51,12 +51,20 @@ public class LRUCache
     private int capacity;
 
     // Stores key → value
+    // Stores the key and its value
+    // What value belongs to this key?
     private Dictionary<int, int> cache = new();
 
     // Stores key → node
+    // Stores the key and where it is in the linked list
+    // Where is this key in the list?
+    // NOTE: The nodes dictionary exists to find a specific node in the linked list quickly0,
+    // NOT to search the cache dictionary.
     private Dictionary<int, LinkedListNode<int>> nodes = new();
 
     // Tracks most recently used keys
+    // Keeps the keys ordered by most recently used\
+    // Which key was used most recently, and which was used least recently?
     private LinkedList<int> list = new();
 
     public LRUCache(int capacity)
@@ -70,10 +78,11 @@ public class LRUCache
             return -1;
 
         // Move the key to the front
-        list.Remove(nodes[key]);
-        list.AddFirst(nodes[key]);
 
-        return cache[key];
+        list.Remove(nodes[key]); // 1. Find and remove the node
+        list.AddFirst(nodes[key]); // 2. Move node to the front
+
+        return cache[key]; // 3. Get the actual value
     }
 
     public void Put(int key, int value)
@@ -89,6 +98,7 @@ public class LRUCache
         // If full, remove least recently used
         if (cache.Count == capacity)
         {
+            // LAST Gets the last node that isn't null, and gets its value (the key)
             int oldest = list.Last!.Value;
 
             list.RemoveLast();
@@ -98,6 +108,12 @@ public class LRUCache
 
         // Add new key
         cache[key] = value;
+
+        // list.AddFirst(key)
+        // This adds the key to the front of your linked list.
+
+        // nodes[key] = ...
+        // This stores the returned node inside your nodes dictionary.
         nodes[key] = list.AddFirst(key);
     }
 }
