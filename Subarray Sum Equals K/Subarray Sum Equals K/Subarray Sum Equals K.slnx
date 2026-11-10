@@ -1,1 +1,6 @@
-<Solution />
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Subarray Sum Equals K.csproj" />
+  </Folder>
+  <Project Path="Subarray Sum Equals K.csproj" />
+</Solution>
