@@ -29,7 +29,10 @@ Output: 3
 public class Solution
 {
     public int NumIslands(char[][] grid)
+
     {
+        // Big O(n*m) where n is the number of rows and m is the number of columns in the grid
+        // DFS (Depth First Search) approach to traverse the grid and count the number of islands
         int islands = 0;
 
         for (int i = 0; i < grid.Length; i++)
