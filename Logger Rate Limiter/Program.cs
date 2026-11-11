@@ -32,8 +32,12 @@ logger.shouldPrintMessage(11, "foo"); // 11 >= 11, return true, next allowed tim
 
 public class Logger
 {
-    Dictionary<string, int> lastPrinted = new();
+    Dictionary<string, int> lastPrinted;
 
+    public Logger()
+    {
+        lastPrinted = new Dictionary<string, int>();
+    }
     public bool ShouldPrintMessage(int timestamp, string message)
     {
         if (!lastPrinted.ContainsKey(message) || timestamp - lastPrinted[message] >= 10)
