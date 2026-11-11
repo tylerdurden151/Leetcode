@@ -36,8 +36,7 @@ public class Logger
 
     public bool ShouldPrintMessage(int timestamp, string message)
     {
-        if (!lastPrinted.ContainsKey(message) ||
-            timestamp - lastPrinted[message] >= 10)
+        if (!lastPrinted.ContainsKey(message) || timestamp - lastPrinted[message] >= 10)
         {
             lastPrinted[message] = timestamp;
             return true;
