@@ -134,3 +134,37 @@ public class Solution2
         return s.Length - 1;
     }
 }
+
+
+// Faster solution that is accepted by leetcode
+public class Solution
+{
+
+    public int Compress(char[] chars)
+    {
+        int write = 0;
+
+        for (int i = 0; i < chars.Length;)
+        {
+            char c = chars[i];
+            int count = 0;
+
+            while (i < chars.Length && chars[i] == c)
+            {
+                i++;
+                count++;
+            }
+
+            chars[write++] = c;
+
+            if (count > 1)
+                // Convert count to string and write each digit to chars 
+                // 12 = > '1', '2'
+                foreach (char digit in count.ToString())
+                    chars[write++] = digit;
+        }
+
+        return write;
+    }
+
+}

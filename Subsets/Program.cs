@@ -30,9 +30,13 @@ public class Solution
 
             for (int i = 0; i < count; i++)
             {
-                List<int> subset = new(result[i]);
-                subset.Add(num);
-                result.Add(subset);
+                // Create a new List subset by adding the current number to each existing subset
+                // meaning copying the existing subset and adding the current number to it
+                // example: if the existing subset is [1, 2]
+                // and the current number is 3, the new subset will be [1, 2, 3]
+                List<int> subset = new(result[i]);  // Copy the existing subset [], [1], [2], [1, 2], ..
+                subset.Add(num);  // Add the current number to the new subset
+                result.Add(subset); // Add the new subset to the result list
             }
         }
 
