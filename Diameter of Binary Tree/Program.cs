@@ -41,7 +41,7 @@ public class Solution
         return diameter;
     }
 
-    private int Height(TreeNode node)
+    private int DFS(TreeNode node)
     {
         if (node == null)
             return 0;
