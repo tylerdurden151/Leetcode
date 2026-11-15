@@ -37,7 +37,8 @@ public class Solution
 
     public int DiameterOfBinaryTree(TreeNode root)
     {
-        Height(root);
+
+        DFS(root);
         return diameter;
     }
 
@@ -46,8 +47,8 @@ public class Solution
         if (node == null)
             return 0;
 
-        int left = Height(node.left);
-        int right = Height(node.right);
+        int left = DFS(node.left);
+        int right = DFS(node.right);
 
         diameter = Math.Max(diameter, left + right);
 
