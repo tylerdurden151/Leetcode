@@ -23,6 +23,10 @@ Note:
 2. There's at least three different solutions. Try to explore all possibilities.
  */
 
+// Solution Just needs to be in Bash
+
+// sed -n '10p' file.txt
+
 using System;
 using System.IO;
 
