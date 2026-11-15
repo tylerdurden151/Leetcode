@@ -27,6 +27,12 @@ Note:
 
 // sed -n '10p' file.txt
 
+
+// sed	      Stream Editor	                   Reads and processes text, one line at a time
+// -n	      Suppress automatic printing	   Prevents every line from being displayed
+// '10p'	  Print line 10	                   10 is the line number, and p means print
+// file.txt	  File name	                       The file containing the text
+
 using System;
 using System.IO;
 
